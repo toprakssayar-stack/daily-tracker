@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm --version)",
+      "Bash(npx --yes create-next-app@latest . --typescript --tailwind --app --src-dir --import-alias \"@/*\" --eslint --no-turbopack --use-npm --yes)",
+      "Read(//private/tmp/**)",
+      "Bash(rm -rf daily-tracker-init)",
+      "Bash(npx --yes create-next-app@latest daily-tracker-init --typescript --tailwind --app --src-dir --import-alias \"@/*\" --eslint --no-turbopack --use-npm --yes)",
+      "Bash(shopt -s dotglob)",
+      "Bash(mv /tmp/daily-tracker-init/* .)",
+      "Bash(mv /tmp/daily-tracker-init/.gitignore .)",
+      "Bash(mv /tmp/daily-tracker-init/.git .)",
+      "Bash(rm -f AGENTS.md CLAUDE.md README.md public/file.svg public/globe.svg public/next.svg public/vercel.svg public/window.svg)",
+      "Bash(npm install *)",
+      "Bash(node scripts/gen-icons.mjs)",
+      "Bash(npm run *)",
+      "Bash(rm -rf src/lib/supabase src/app/login src/app/auth src/proxy.ts supabase .env.local.example src/lib/cache.ts)",
+      "Bash(npm uninstall *)"
+    ]
+  }
+}
